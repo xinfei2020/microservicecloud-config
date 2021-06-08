@@ -9,19 +9,9 @@ server:
   port: 8001
 
 spring:
-  profiles: dev
-  application:
-    name: microservicecloud-config-dept-clinet
-
-mybatis:
-  config-localtion: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.libovito.springcloud.entities
-  mapper-locations: 
-  - classpath:mybatis/mapper/**/*.xml
-
-spring:
+   profiles: dev
    application:
-    name: microservicecloud-dept
+    name: microservicecloud-config-dept-client
    datasource:
      type: com.alibaba.druid.pool.DruidDataSource
      driver-class-name: org.gjt.mm.mysql.Driver
@@ -34,6 +24,12 @@ spring:
        max-total: 5
        max-wait-millis: 200
 
+mybatis:
+  config-localtion: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.libovito.springcloud.entities
+  mapper-locations: 
+  - classpath:mybatis/mapper/**/*.xml
+
 eureka:
   client:  #客户端注册进eureka服务列表内
     register-with-eureka: true #服务注册 true 注册到服务中心
@@ -41,7 +37,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
   instance:
-    instance-id: dept-8001.com
+    instance-id: microservicecloud-dept8001
     prefer-ip-address: true #访问路径可以显示IP地址
 
 info:
@@ -56,19 +52,9 @@ server:
   port: 8001
 
 spring:
-  profiles: test
-  application:
-    name: microservicecloud-config-clinet
-    
-mybatis:
-  config-localtion: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.libovito.springcloud.entities
-  mapper-locations: 
-  - classpath:mybatis/mapper/**/*.xml
-
-spring:
+   profiles: test
    application:
-    name: microservicecloud-dept
+    name: microservicecloud-config-dept-client
    datasource:
      type: com.alibaba.druid.pool.DruidDataSource
      driver-class-name: org.gjt.mm.mysql.Driver
@@ -81,6 +67,12 @@ spring:
        max-total: 5
        max-wait-millis: 200
 
+mybatis:
+  config-localtion: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.libovito.springcloud.entities
+  mapper-locations: 
+  - classpath:mybatis/mapper/**/*.xml
+
 eureka:
   client:  #客户端注册进eureka服务列表内
     register-with-eureka: true #服务注册 true 注册到服务中心
@@ -88,7 +80,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
   instance:
-    instance-id: dept-8001.com
+    instance-id: microservicecloud-dept8001
     prefer-ip-address: true #访问路径可以显示IP地址
 
 info:

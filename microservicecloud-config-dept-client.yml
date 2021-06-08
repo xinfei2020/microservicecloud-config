@@ -24,8 +24,8 @@ spring:
        max-total: 5
        max-wait-millis: 200
 
-mybatis:
-  config-localtion: classpath:mybatis/mybatis.cfg.xml
+mybatis: 
+  config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.libovito.springcloud.entities
   mapper-locations: 
   - classpath:mybatis/mapper/**/*.xml
@@ -67,8 +67,8 @@ spring:
        max-total: 5
        max-wait-millis: 200
 
-mybatis:
-  config-localtion: classpath:mybatis/mybatis.cfg.xml
+mybatis: 
+  config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.libovito.springcloud.entities
   mapper-locations: 
   - classpath:mybatis/mapper/**/*.xml
